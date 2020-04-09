@@ -194,7 +194,7 @@ tasks:
       - "--test_env=TEST_INSTALL_BASE=$HOME/bazeltest_install_base"
       - "--test_env=TEST_REPOSITORY_HOME=$OUTPUT_BASE/external"
     test_targets:
-      - "//src:all_windows_tests"
+      - "//src/test/java/com/google/devtools/build/lib/skyframe:SkyframeTests"
   rbe_ubuntu1604:
     shell_commands:
       - sed -i.bak -e 's/^# android_sdk_repository/android_sdk_repository/' -e 's/^#
