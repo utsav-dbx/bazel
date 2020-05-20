@@ -119,8 +119,7 @@ public class WindowsSubprocess implements Subprocess {
         @Override
         public Thread newThread(Runnable runnable) {
           Thread thread = new Thread(null, runnable,
-              "Windows-Process-Waiter-Thread-" + THREAD_SEQUENCE_NUMBER.getAndIncrement(),
-              16 * 1024);
+              "Windows-Process-Waiter-Thread-" + THREAD_SEQUENCE_NUMBER.getAndIncrement());
           thread.setDaemon(true);
           return thread;
         }
